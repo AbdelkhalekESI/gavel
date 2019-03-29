@@ -9,12 +9,12 @@ if __name__ == '__main__':
     import os
 
     extra_files = []
-    if os.environ.get('DEBUG', False):
+    if os.environ.get('DEBUG', True):
         app.debug = True
         extra_files.append('./config.yaml')
 
     app.run(
-        host='0.0.0.0',
+        host='127.0.0.1',
         port=PORT,
         extra_files=extra_files
     )
